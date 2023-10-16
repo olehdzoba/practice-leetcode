@@ -1,4 +1,4 @@
-// START: Day 1 - 20/03/2023
+// 20-03-2023
 
 /**
  * @param {number[]} nums

@@ -1,3 +1,5 @@
+// 26-09-2023
+
 /**
  * @param {number[]} gain
  * @return {number}

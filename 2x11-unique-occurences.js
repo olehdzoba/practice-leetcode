@@ -1,3 +1,5 @@
+// 28-09-2023
+
 /**
  * @param {number[]} arr
  * @return {boolean}
