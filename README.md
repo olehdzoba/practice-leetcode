@@ -8,5 +8,5 @@ Here I will occasionally post challenges that I solve on [LeetCode](https://leet
 
 Since I try to solve these challenges often enough I append a streak number to each solution. Streak is continuous solutions with one day break at most not counting days off.
 
-XYYY-challenge-name.js \
-where X - streak number, YYY - day when the challenge was solved.
+XxYY-challenge-name.js \
+where X - streak number, YY - day when the challenge was solved.
