@@ -5,7 +5,7 @@
 // I might improve performance later (this on beats only 15%).
 
 var StockSpanner = function () {
-  this.stocks = [];
+  this.registry = [];
 };
 
 /**
@@ -13,15 +13,25 @@ var StockSpanner = function () {
  * @return {number}
  */
 StockSpanner.prototype.next = function (price) {
-  this.stocks.push(price);
+  var pointer = 0;
+  while (true) {
+    if (pointer == this.registry.length) {
+      console.log(1);
+      this.registry.push([price, 1]);
+      return 1;
+    }
 
-  var span = 0;
-  for (var i = this.stocks.length - 1; i >= 0; i--) {
-    if (this.stocks[i] <= price) span += 1;
-    else break;
+    var [value, span] = this.registry[pointer];
+
+    if (price < value) {
+      this.registry[pointer][1] += 1;
+      pointer += 1;
+    } else {
+      this.registry = [...this.registry.slice(0, pointer), [price, span + 1]];
+      console.log(span + 1);
+      return span + 1;
+    }
   }
-
-  return span;
 };
 
 var stockSpanner = new StockSpanner();
